@@ -1,0 +1,51 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.8.RELEASE'
+        targetDir = 'target'
+        outputVersion = '0.0.1'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+subprojects {
+
+    group 'msa-sample'
+    version '0.0.1-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        testImplementation('org.springframework.boot:spring-boot-starter-test')
+        implementation("org.springframework.cloud:spring-cloud-starter-zipkin:2.1.4.RELEASE")
+        implementation("org.springframework.cloud:spring-cloud-starter-sleuth:2.1.4.RELEASE")
+    }
+}
+
+
+project(':tracing-end-point') {
+    dependencies {
+
+    }
+}
+
+project(':tracing-start-point') {
+    dependencies {
+
+    }
+}

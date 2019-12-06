@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="tracing.end-point.main" target="1.8" />
+      <module name="tracing.end-point.test" target="1.8" />
+      <module name="tracing.main" target="1.8" />
+      <module name="tracing.start-point.main" target="1.8" />
+      <module name="tracing.start-point.test" target="1.8" />
+      <module name="tracing.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
